@@ -6,6 +6,10 @@ import App from './App.jsx'
 import './index.css'
 import Menu from './components/Menu.jsx';
 import Inicio from './pages/Inicio.jsx';
+import Login from './pages/Login.jsx'
+import Register from './pages/register.jsx'
+import Piezas from './pages/Piezas.jsx'
+import Admin from './pages/admin.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +18,15 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <App /> },
       { path: 'Inicio', element: <Inicio /> },
+      { path: 'Login', element: <Login /> },
+      { path: 'Registro', element: <Register/> },
+      { path: 'Piezas', element: <Piezas/> },
+      { path: 'admin', element: <Admin/> },
+
+      
+
+
+
 
     ],
   },

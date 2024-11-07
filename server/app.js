@@ -14,22 +14,24 @@
 //     console.log("server started on port 8080")
 // });
 
-
-import express from "express"; // Cambia "e" por "express"
-import cors from 'cors';
+// app.js
+import express from "express";
+import cors from "cors";
 
 import db from "./database/db.js";
 import router from "./routes/routes.js";
 
-
 const app = express();
 
+// Configurar CORS y JSON
 app.use(cors());
-app.use(express.json()); // Usar express.json() directamente
+app.use(express.json());
 
-// Cambiar la ruta a '/events'
-app.use('/events', router); // Usar '/events' para las rutas de eventos
+// Configuración de rutas con prefijos
+app.use('/events', router);  // Prefijo para rutas de eventos
+app.use('/auth', router);    // Prefijo para rutas de autenticación
 
+// Conectar a la base de datos
 try {
     await db.authenticate();
     console.log('Conexión exitosa a la DB');
@@ -37,10 +39,8 @@ try {
     console.log(`El error es: ${error}`);
 }
 
-// app.get('/', (req, res) => {
-//     res.send('Hola mundo');
-// });
-
+// Iniciar el servidor
 app.listen(8000, () => {
     console.log('Server up and running in http://localhost:8000/');
 });
+
