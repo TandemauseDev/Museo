@@ -7,8 +7,6 @@ const Piezas = () => {
     <div>
       {/* Título centrado */}
       <h1 className="text-4xl font-bold text-center mb-4">Nuestras piezas digitales</h1>
-      
-      {/* Imagen importada que cubre todo el ancho */}
       <img 
         src={imagen} 
         alt="Imagen descriptiva"

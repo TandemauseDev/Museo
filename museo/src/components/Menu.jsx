@@ -26,9 +26,9 @@ const Menu = () => {
 
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             <Link to="/" className="text-gray-700 hover:text-gray-900">telecomunicaciones</Link>
-            <Link to="/" className="text-gray-700 hover:text-gray-900">Anatomia</Link>
-            <Link to="/" className="text-gray-700 hover:text-gray-900">Plastico</Link>
-            <Link to="/" className="text-gray-700 hover:text-gray-900">Contactanos</Link>
+            <Link to="/Piezas" className="text-gray-700 hover:text-gray-900">Anatomia</Link>
+            <Link to="/Login" className="text-gray-700 hover:text-gray-900">Plastico</Link>
+            <Link to="/Registro" className="text-gray-700 hover:text-gray-900">Contactanos</Link>
           </div>
         </div>
       </nav>
